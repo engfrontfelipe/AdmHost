@@ -137,7 +137,7 @@ function InitialPage() {
                   <Label htmlFor="name" className="text-right">
                     Plano Contratado:
                   </Label>
-                  <Select 
+                  <Select
                     onValueChange={(value) =>
                       console.log("Plano selecionado:", value)
                     }

@@ -5,11 +5,19 @@ import Login from "./pages/Login";
 
 import InitialPage from "./pages/InitialPage";
 
+import PrivateRoute from "./lib/PrivateRoute";
+
 export function AppRoutes() {
   return (
     <Routes>
-      <Route path="/" element={<Login />} />
-      <Route path="/initialPage" element={<InitialPage />} />
-    </Routes>
+      <Route path="/login" element={<Login />} />
+ <Route
+        path="/initialPage"
+        element={
+          <PrivateRoute>
+            <InitialPage />
+          </PrivateRoute>
+        }
+      />    </Routes>
   );
 }
